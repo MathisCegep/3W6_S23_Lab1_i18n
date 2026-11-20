@@ -16,9 +16,10 @@ namespace ZombieParty.Models
         public string? Description { get; set; }
 
         [Range(0, Double.MaxValue)]
+        [Display(Name = "Weapon's Force")]
         public decimal Force { get; set; }
 
-        [Range(0, 100000, ErrorMessage = "The {0} must be between {1} and {2}")]
+        [Range(0, 100000, ErrorMessage = "RangeValidation")]
         [DataType(DataType.Currency)]
         public decimal Price { get; set; }
 
@@ -29,7 +30,8 @@ namespace ZombieParty.Models
         [Display(Name = "Weapon's Image")]
         [DataType(DataType.ImageUrl)]
         public string? Image { get; set; }
-
+        
+        [Display(Name = "Qty")]
         public int Qty { get; set; }
 
         [Display(Name = "Qty Bought")]

@@ -7,9 +7,12 @@ namespace ZombieParty.Models
     {
         public int Id { get; set; }
         [StringLength(25, MinimumLength = 5)]
+        [Display(Name = "Title")]
         public string Title { get; set; }
         [StringLength(255)]
+        [Display(Name = "Description")]
         public string Description { get; set; }
+        [Display(Name ="AdventureDate")]
         public DateTime AdventureDate { get; set; }
 
         [ValidateNever]
